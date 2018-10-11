@@ -1,6 +1,9 @@
 # Ball-rally
 A retro style game done in Lua, using the love2d engine. A first attempt at game development. Exploring simple physics and game states.
 
+# FSM of game states
+![fsm](fsm.png)
+
 # External Files used 
 [push](https://github.com/Ulydev/push) - a library for handling resolution
 
@@ -12,6 +15,7 @@ A retro style game done in Lua, using the love2d engine. A first attempt at game
 - Commenting code
 - Updating readme(rules, usage, images etc.)
 - Possible deployment to server
+
 
 
 # Reference
