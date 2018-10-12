@@ -11,6 +11,8 @@ A retro style game done in Lua, using the love2d engine. A first attempt at game
 
 [munro](http://www.tenbytwenty.com/#munro) - a pixelated font to recreate a retro vibe
 
+# Releases
+Windows [v1.0.4 zip](https://github.com/deoliang/ball-rally/releases/download/v1.0.4/ball-rally.zip) file, unzip and run ball-rally.exe to play
 # To-do
 - Commenting code
 - Updating readme(rules, usage, images etc.)
