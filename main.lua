@@ -123,12 +123,12 @@ function love.keypressed(key)
         gameState = 'start'
         elapsed = 0
         ball:reset()
-    elseif key == 'h' then
+    elseif key == 'h' and gameState ~= 'play' and gameState ~= 'done'  then
         player1 = Board(VIRTUAL_WIDTH/2-20, VIRTUAL_HEIGHT-15,20,5)    
         if gameState == 'start' then
             gameState = 'play'  
         end     
-    elseif key == 'e'  then
+    elseif key == 'e' and gameState ~= 'play' and gameState ~= 'done' then
         player1 = Board(VIRTUAL_WIDTH/2-20, VIRTUAL_HEIGHT-15,40,5)    
         if gameState == 'start' then
             gameState = 'play'
