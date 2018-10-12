@@ -92,18 +92,22 @@ function love.update(dt)
         end 
     end
 
-    if love.keyboard.isDown('left') then
-      
-        player1.dx = -PADDLE_SPEED 
-    elseif love.keyboard.isDown('right') then
-
-        player1.dx = PADDLE_SPEED
-    else
-        player1.dx = 0
-    end
+    
 
     if gameState == 'play' then
         ball:update(dt)
+        if love.keyboard.isDown('left') then
+      
+        player1.dx = -PADDLE_SPEED 
+        elseif love.keyboard.isDown('right') then
+
+        player1.dx = PADDLE_SPEED
+        else
+        player1.dx = 0
+        end
+    end
+    if gameState == 'done' then
+        player1.dx = 0
     end
     player1:update(dt)
     
@@ -124,7 +128,7 @@ function love.keypressed(key)
         elapsed = 0
         ball:reset()
     elseif key == 'h' and gameState ~= 'play' and gameState ~= 'done'  then
-        player1 = Board(VIRTUAL_WIDTH/2-20, VIRTUAL_HEIGHT-15,20,5)    
+        player1 = Board(VIRTUAL_WIDTH/2-10, VIRTUAL_HEIGHT-15,20,5)    
         if gameState == 'start' then
             gameState = 'play'  
         end     
