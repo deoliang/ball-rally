@@ -34,7 +34,7 @@ function love.load()
     love.window.setTitle('Ball Rally')
     push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, WINDOW_WIDTH, WINDOW_HEIGHT, {
         fullscreen = false,
-        resizable = false,
+        resizable = true,
         vsync = true
     })
     
@@ -107,6 +107,10 @@ function love.update(dt)
     end
     player1:update(dt)
     
+end
+
+function love.resize(w, h)
+    push:resize(w, h)
 end
 
 function love.keypressed(key)
